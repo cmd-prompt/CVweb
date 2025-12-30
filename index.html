@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name NEEDED - CV</title>
+    <style>
+        :root {
+            --bg-dark: #000000;
+            --bg-secondary: #0a0a0a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #4a9eff;
+            --accent-hover: #6bb0ff;
+            --border: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 35%;
+            padding: 60px 40px;
+            background-color: var(--bg-dark);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--bg-secondary);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .contact-btn::after {
+            content: '↗';
+            font-size: 12px;
+        }
+
+        .profile-info h1 {
+            font-size: 42px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .profile-info h2 {
+            font-size: 20px;
+            font-weight: 300;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .profile-info p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+
+        /* Content Area Styles */
+        .content {
+            width: 65%;
+            padding: 60px 60px 40px 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .content-sections {
+            flex: 1;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: right;
+        }
+
+        .item {
+            margin-bottom: 50px;
+        }
+
+        .item h3 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .item .meta {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .item .description {
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+
+        .item ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .item ul li {
+            padding-left: 20px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .item ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--bg-secondary);
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        .nav-btn.active {
+            background-color: var(--accent);
+            color: var(--bg-dark);
+            border-color: var(--accent);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--text-primary);
+        }
+
+        .modal-title {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .modal-info {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .modal-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .modal-info a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .modal-info div {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 40px 30px;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .contact-buttons {
+                margin-bottom: 40px;
+            }
+
+            .profile-info h1 {
+                font-size: 32px;
+            }
+
+            .profile-info h2 {
+                font-size: 18px;
+            }
+
+            .content {
+                width: 100%;
+                padding: 40px 30px;
+            }
+
+            .section-title {
+                text-align: left;
+            }
+
+            .bottom-nav {
+                gap: 10px;
+            }
+
+            .nav-btn {
+                padding: 10px 18px;
+                font-size: 12px;
+            }
+
+            .modal-content {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="contact-buttons">
+                <button class="contact-btn" onclick="showPopup('linkedin')">LinkedIn</button>
+                <button class="contact-btn" onclick="showPopup('github')">GitHub</button>
+                <button class="contact-btn" onclick="showPopup('email')">Email</button>
+            </div>
+            <div class="profile-info">
+                <h1>Your Name NEEDED</h1>
+                <h2>Your Title NEEDED</h2>
+                <p>A brief professional description highlighting your expertise, experience, and what makes you unique in your field. This should capture your professional identity and core competencies. NEEDED</p>
+            </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <main class="content">
+            <div class="content-sections">
+                <!-- Awards Section -->
+                <section id="awards" class="section active">
+                    <div class="section-title">Awards</div>
+                    <div class="item">
+                        <h3>Outstanding Achievement Award NEEDED</h3>
+                        <div class="meta">Organization Name NEEDED • Year NEEDED</div>
+                        <div class="description">Brief description of the award, what it recognizes, and why you received it. Include the impact or significance of this achievement. NEEDED</div>
+                    </div>
+                    <div class="item">
+                        <h3>Excellence in Innovation Award NEEDED</h3>
+                        <div class="meta">Institution Name NEEDED • Year NEEDED</div>
+                        <div class="description">Description of the award criteria and your specific accomplishment that earned this recognition. Highlight the competitive nature or selectivity if applicable. NEEDED</div>
+                    </div>
+                    <div class="item">
+                        <h3>Best Project Award NEEDED</h3>
+                        <div class="meta">Event/Competition Name NEEDED • Year NEEDED</div>
+                        <div class="description">Details about the project or work that was recognized, the evaluation criteria, and what set your work apart from others. NEEDED</div>
+                    </div>
+                </section>
+
+                <!-- Experience Section -->
+                <section id="experience" class="section">
+                    <div class="section-title">Experience</div>
+                    <div class="item">
+                        <h3>Senior Position Title NEEDED</h3>
+                        <div class="meta">Company Name NEEDED • Start Date - End Date NEEDED<br>Location NEEDED</div>
+                        <div class="description">
+                            <ul>
+                                <li>Key responsibility or achievement demonstrating leadership and impact on the organization. NEEDED</li>
+                                <li>Major project or initiative you led, including measurable outcomes and results. NEEDED</li>
+                                <li>Technical skills, tools, or methodologies you employed in this role. NEEDED</li>
+                                <li>Collaboration or team leadership experience that showcases your soft skills. NEEDED</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>Mid-Level Position Title NEEDED</h3>
+                        <div class="meta">Company Name NEEDED • Start Date - End Date NEEDED<br>Location NEEDED</div>
+                        <div class="description">
+                            <ul>
+                                <li>Primary responsibilities and contributions to the team or department. NEEDED</li>
+                                <li>Specific projects or deliverables you were responsible for. NEEDED</li>
+                                <li>Skills developed or technologies mastered during this position. NEEDED</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>Junior Position Title NEEDED</h3>
+                        <div class="meta">Company Name NEEDED • Start Date - End Date NEEDED<br>Location NEEDED</div>
+                        <div class="description">
+                            <ul>
+                                <li>Early career responsibilities and learning experiences. NEEDED</li>
+                                <li>Notable contributions or projects from this foundational role. NEEDED</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects" class="section">
+                    <div class="section-title">Projects</div>
+                    <div class="item">
+                        <h3>Major Project Name NEEDED</h3>
+                        <div class="meta">Tech Stack: Technology 1, Technology 2, Technology 3 NEEDED</div>
+                        <div class="description">
+                            Comprehensive description of the project, its purpose, and the problem it solves. Include your specific role and contributions. NEEDED
+                            <ul>
+                                <li>Key feature or functionality you implemented. NEEDED</li>
+                                <li>Technical challenge you overcame and how you solved it. NEEDED</li>
+                                <li>Impact or results of the project (users, performance metrics, etc.). NEEDED</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>Secondary Project Name NEEDED</h3>
+                        <div class="meta">Tech Stack: Framework 1, Library 2, Tool 3 NEEDED</div>
+                        <div class="description">
+                            Overview of this project, highlighting what makes it unique or innovative. Explain your motivation and the value it provides. NEEDED
+                            <ul>
+                                <li>Notable technical implementation or architecture decision. NEEDED</li>
+                                <li>Collaboration aspects if it was a team project. NEEDED</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>Side Project or Open Source Contribution NEEDED</h3>
+                        <div class="meta">Technologies Used NEEDED</div>
+                        <div class="description">
+                            Brief description of this additional project or contribution. Emphasize what you learned or how it demonstrates your passion for the field. NEEDED
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section id="skills" class="section">
+                    <div class="section-title">Skills</div>
+                    <div class="item">
+                        <h3>Technical Skills NEEDED</h3>
+                        <div class="description">
+                            <ul>
+                                <li><strong>Programming Languages:</strong> Language 1, Language 2, Language 3, Language 4 NEEDED</li>
+                                <li><strong>Frameworks & Libraries:</strong> Framework 1, Framework 2, Library 1, Library 2 NEEDED</li>
+                                <li><strong>Tools & Platforms:</strong> Tool 1, Platform 1, Tool 2, Platform 2 NEEDED</li>
+                                <li><strong>Databases:</strong> Database 1, Database 2, Database 3 NEEDED</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>Professional Skills NEEDED</h3>
+                        <div class="description">
+                            <ul>
+                                <li>Leadership and team management NEEDED</li>
+                                <li>Project planning and execution NEEDED</li>
+                                <li>Cross-functional collaboration NEEDED</li>
+                                <li>Agile/Scrum methodologies NEEDED</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>Certifications & Education NEEDED</h3>
+                        <div class="description">
+                            <ul>
+                                <li><strong>Degree Name</strong> - University Name, Year NEEDED</li>
+                                <li><strong>Certification Name</strong> - Issuing Organization, Year NEEDED</li>
+                                <li><strong>Additional Training</strong> - Course or Program Name NEEDED</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <nav class="bottom-nav">
+                <button class="nav-btn active" onclick="showSection('awards')">Awards</button>
+                <button class="nav-btn" onclick="showSection('experience')">Experience</button>
+                <button class="nav-btn" onclick="showSection('projects')">Projects</button>
+                <button class="nav-btn" onclick="showSection('skills')">Skills</button>
+            </nav>
+        </main>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal" onclick="closePopupOnOutside(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closePopup()">&times;</button>
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-info" id="modalInfo"></div>
+        </div>
+    </div>
+
+    <script>
+        // Contact information data
+        const contactData = {
+            linkedin: {
+                title: 'LinkedIn',
+                username: 'yourusername NEEDED',
+                url: 'https://linkedin.com/in/yourusername NEEDED'
+            },
+            github: {
+                title: 'GitHub',
+                username: 'yourusername NEEDED',
+                url: 'https://github.com/yourusername NEEDED'
+            },
+            email: {
+                title: 'Email',
+                address: 'your.email@example.com NEEDED'
+            }
+        };
+
+        // Show popup modal
+        function showPopup(type) {
+            const modal = document.getElementById('contactModal');
+            const title = document.getElementById('modalTitle');
+            const info = document.getElementById('modalInfo');
+
+            const data = contactData[type];
+            title.textContent = data.title;
+
+            if (type === 'email') {
+                info.innerHTML = `<div><strong>Email:</strong></div><div><a href="mailto:${data.address}">${data.address}</a></div>`;
+            } else {
+                info.innerHTML = `
+                    <div><strong>Username:</strong> ${data.username}</div>
+                    <div><strong>URL:</strong> <a href="${data.url}" target="_blank">${data.url}</a></div>
+                `;
+            }
+
+            modal.classList.add('active');
+        }
+
+        // Close popup modal
+        function closePopup() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.remove('active');
+        }
+
+        // Close popup when clicking outside
+        function closePopupOnOutside(event) {
+            if (event.target.id === 'contactModal') {
+                closePopup();
+            }
+        }
+
+        // Close popup with ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closePopup();
+            }
+        });
+
+        // Show specific section
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionName);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Update active button
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -144,9 +144,9 @@ export const cvData: CVData = {
       ],
     },
     {
-      category: "Software Design",
+      category: "Coursework",
       items: [
-        "Coursework",
+        "Software Design",
       ],
     },
   ],

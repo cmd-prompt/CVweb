@@ -49,14 +49,14 @@ export interface CVData {
 export const cvData: CVData = {
   personal: {
     name: "Ahmad Fauzan Putra",
-    title: "Computer Science Student & Competitive Programmer",
+    title: "Computer Science Student",
     description:
-      "Computer Science student at Institut Teknologi Bandung with a strong passion for competitive programming and software development. Proven track record in international and national informatics competitions, including ICPC Asia-Jakarta 2025 Finalist and 2nd Place at Hology 8.0 2025. Experienced in building diverse projects ranging from AI-powered applications to game development.",
+      "Computer Science student at Institut Teknologi Bandung. Competed in ICPC Asia-Jakarta 2025 and placed 2nd in Hology 8.0 2025. Built projects using Python, C++, and various technologies including AI, game development, and data structures.",
   },
   contact: {
     linkedin: {
-      username: "ilhamfp",
-      url: "https://ilhamfp.com",
+      username: "Ahmad Fauzan Putra",
+      url: "https://www.linkedin.com/in/ahmad-fauzan-p-b88608340/",
     },
     github: {
       username: "cmd-prompt",
@@ -66,121 +66,87 @@ export const cvData: CVData = {
   },
   awards: [
     {
-      title: "Finalist, ICPC Asia-Jakarta 2025",
-      organization: "International Collegiate Programming Contest",
+      title: "Finalist, ICPC Asia-Jakarta",
+      organization: "ICPC",
       year: "2025",
       description:
-        "Achieved finalist status in the International Collegiate Programming Contest (ICPC) Asia-Jakarta regional competition, one of the most prestigious international informatics competitions at the collegiate level, competing against top university teams across Asia.",
+        "International informatics competition at the collegiate level",
     },
     {
       title: "2nd Place, Hology 8.0",
-      organization: "National Indonesian Informatics Competition",
+      organization: "Hology",
       year: "2025",
       description:
-        "Secured second place in Hology 8.0, a highly competitive national Indonesian informatics competition open to college students nationwide, demonstrating exceptional problem-solving skills and algorithmic expertise.",
+        "National Indonesian informatics competition open to college students",
     },
     {
       title: "Finalist, OSN Informatika",
-      organization: "National Science Olympiad - Informatics",
+      organization: "OSN",
       year: "2023",
       description:
-        "Selected as a finalist in the National Science Olympiad (OSN) for Informatics, competing among the best high school students across Indonesia in computer science and competitive programming.",
+        "National Indonesian informatics competition for highschool students",
     },
   ],
   experience: [
     {
-      role: "Computer Science Student",
+      role: "Bachelor of Science in Informatics/Computer Science",
       company: "Institut Teknologi Bandung",
       period: "July 2024 - Expected October 2028",
       location: "Bandung, Indonesia",
       responsibilities: [
-        "Pursuing Bachelor of Science in Informatics/Computer Science at one of Indonesia's premier technical universities",
-        "Actively participating in competitive programming competitions at national and international levels",
-        "Developing proficiency in software design, algorithms, and data structures through coursework and practical projects",
-        "Collaborating on team-based projects implementing various software engineering methodologies and best practices",
+        "Coursework in Software Design",
+        "Working on projects involving algorithms and data structures",
       ],
     },
   ],
   projects: [
     {
       title: "Infinite Wiki",
-      techStack: "Gemini AI, Web Development",
+      techStack: "Gemini AI",
       description:
-        "A Wikipedia-like website that dynamically generates article definitions using Google's Gemini AI. This innovative project combines traditional wiki functionality with modern AI capabilities to provide instant, comprehensive explanations on any topic.",
-      highlights: [
-        "Implemented AI-powered content generation using Gemini AI API",
-        "Created a seamless user experience for accessing AI-generated encyclopedic content",
-        "Successfully deployed and accessible via public website",
-      ],
+        "A Wikipedia-like website that generates the definitions using Gemini AI.",
+      highlights: [],
     },
     {
       title: "Online Library",
-      techStack: "Python, Latent Sentiment Analysis (LSA), Text Analysis",
+      techStack: "Latent Sentiment Analysis (LSA)",
       description:
-        "Developed an intelligent book recommendation system utilizing text sentiment analysis through Latent Sentiment Analysis (LSA). Created comprehensive analysis modules to process and evaluate book content for personalized recommendations.",
-      highlights: [
-        "Built the book recommendation engine using advanced LSA techniques",
-        "Designed and implemented sentiment analysis modules from scratch",
-      ],
+        "Built the Book Recommendation system using text sentiment analysis done via Latent Sentiment Analysis (LSA) and created the analysis modules.",
+      highlights: [],
     },
     {
       title: "Subgroddit",
-      techStack: "CLI, Data Structures, Python/C++",
+      techStack: "CLI",
       description:
-        "A command-line interface based Reddit-like platform demonstrating proficiency in data structures and software architecture. Implemented core functionality including persistent storage and advanced voting mechanisms.",
-      highlights: [
-        "Developed load/save module for data persistence",
-        "Implemented custom double-ended linked list data structure",
-        "Created voting system with efficient data manipulation",
-      ],
+        "A CLI-based Reddit-like Website. Created the load/save module, double-ended linked list, and voting module.",
+      highlights: [],
     },
     {
       title: "Matrix Calculator",
-      techStack: "Python/C++, Linear Algebra",
+      techStack: "Linear Algebra",
       description:
-        "A comprehensive calculator application for matrix operations, focusing on advanced mathematical computations. Worked on multiple complex modules including linear equation solving, determinant calculation, and regression analysis.",
-      highlights: [
-        "Implemented linear equation system solver module",
-        "Developed determinant calculation algorithms",
-        "Created regression analysis module for statistical computations",
-      ],
+        "A calculator app for matrices. Worked on the linear equation system module, determinant module, and regression module.",
+      highlights: [],
     },
     {
       title: "Gravity Runner",
-      techStack: "Unity, C#, Game Development",
+      techStack: "Unity",
       description:
-        "An endless runner game developed in Unity game engine, featuring dynamic gameplay mechanics and player abilities. Specialized in implementing the player skill system that enhances gameplay variety and user engagement.",
-      highlights: [
-        "Designed and implemented player skill system",
-        "Created interactive gameplay mechanics in Unity environment",
-      ],
+        "An \"Endless Runner\" game developed in Unity. Specifically worked in creating the skills the player can use.",
+      highlights: [],
     },
   ],
   skills: [
     {
-      category: "Languages & Technologies",
+      category: "Languages And Technologies",
       items: [
-        "Programming Languages: Python, C++, C",
-        "Version Control: Git",
-        "Game Development: Unity, C#",
-        "AI/ML: Gemini AI API, Latent Sentiment Analysis (LSA)",
+        "Python, C++, C, Git",
       ],
     },
     {
-      category: "Technical Competencies",
+      category: "Software Design",
       items: [
-        "Data Structures & Algorithms",
-        "Competitive Programming",
-        "Software Design (Coursework)",
-        "Text Analysis & Sentiment Processing",
-      ],
-    },
-    {
-      category: "Education",
-      items: [
-        "Bachelor of Science in Informatics/Computer Science - Institut Teknologi Bandung, 2024-2028 (Expected)",
-        "Competitive Programming: ICPC, National Olympiads",
-        "Advanced coursework in Software Design and Computer Science fundamentals",
+        "Coursework",
       ],
     },
   ],

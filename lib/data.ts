@@ -48,135 +48,139 @@ export interface CVData {
 
 export const cvData: CVData = {
   personal: {
-    name: "Your Name NEEDED",
-    title: "Your Title NEEDED",
+    name: "Ahmad Fauzan Putra",
+    title: "Computer Science Student & Competitive Programmer",
     description:
-      "A brief professional description highlighting your expertise, experience, and what makes you unique in your field. This should capture your professional identity and core competencies. NEEDED",
+      "Computer Science student at Institut Teknologi Bandung with a strong passion for competitive programming and software development. Proven track record in international and national informatics competitions, including ICPC Asia-Jakarta 2025 Finalist and 2nd Place at Hology 8.0 2025. Experienced in building diverse projects ranging from AI-powered applications to game development.",
   },
   contact: {
     linkedin: {
-      username: "yourusername NEEDED",
-      url: "https://linkedin.com/in/yourusername NEEDED",
+      username: "ilhamfp",
+      url: "https://ilhamfp.com",
     },
     github: {
-      username: "yourusername NEEDED",
-      url: "https://github.com/yourusername NEEDED",
+      username: "cmd-prompt",
+      url: "https://github.com/cmd-prompt",
     },
-    email: "your.email@example.com NEEDED",
+    email: "fpahmad36@gmail.com",
   },
   awards: [
     {
-      title: "Outstanding Achievement Award NEEDED",
-      organization: "Organization Name NEEDED",
-      year: "Year NEEDED",
+      title: "Finalist, ICPC Asia-Jakarta 2025",
+      organization: "International Collegiate Programming Contest",
+      year: "2025",
       description:
-        "Brief description of the award, what it recognizes, and why you received it. Include the impact or significance of this achievement. NEEDED",
+        "Achieved finalist status in the International Collegiate Programming Contest (ICPC) Asia-Jakarta regional competition, one of the most prestigious international informatics competitions at the collegiate level, competing against top university teams across Asia.",
     },
     {
-      title: "Excellence in Innovation Award NEEDED",
-      organization: "Institution Name NEEDED",
-      year: "Year NEEDED",
+      title: "2nd Place, Hology 8.0",
+      organization: "National Indonesian Informatics Competition",
+      year: "2025",
       description:
-        "Description of the award criteria and your specific accomplishment that earned this recognition. Highlight the competitive nature or selectivity if applicable. NEEDED",
+        "Secured second place in Hology 8.0, a highly competitive national Indonesian informatics competition open to college students nationwide, demonstrating exceptional problem-solving skills and algorithmic expertise.",
     },
     {
-      title: "Best Project Award NEEDED",
-      organization: "Event/Competition Name NEEDED",
-      year: "Year NEEDED",
+      title: "Finalist, OSN Informatika",
+      organization: "National Science Olympiad - Informatics",
+      year: "2023",
       description:
-        "Details about the project or work that was recognized, the evaluation criteria, and what set your work apart from others. NEEDED",
+        "Selected as a finalist in the National Science Olympiad (OSN) for Informatics, competing among the best high school students across Indonesia in computer science and competitive programming.",
     },
   ],
   experience: [
     {
-      role: "Senior Position Title NEEDED",
-      company: "Company Name NEEDED",
-      period: "Start Date - End Date NEEDED",
-      location: "Location NEEDED",
+      role: "Computer Science Student",
+      company: "Institut Teknologi Bandung",
+      period: "July 2024 - Expected October 2028",
+      location: "Bandung, Indonesia",
       responsibilities: [
-        "Key responsibility or achievement demonstrating leadership and impact on the organization. NEEDED",
-        "Major project or initiative you led, including measurable outcomes and results. NEEDED",
-        "Technical skills, tools, or methodologies you employed in this role. NEEDED",
-        "Collaboration or team leadership experience that showcases your soft skills. NEEDED",
-      ],
-    },
-    {
-      role: "Mid-Level Position Title NEEDED",
-      company: "Company Name NEEDED",
-      period: "Start Date - End Date NEEDED",
-      location: "Location NEEDED",
-      responsibilities: [
-        "Primary responsibilities and contributions to the team or department. NEEDED",
-        "Specific projects or deliverables you were responsible for. NEEDED",
-        "Skills developed or technologies mastered during this position. NEEDED",
-      ],
-    },
-    {
-      role: "Junior Position Title NEEDED",
-      company: "Company Name NEEDED",
-      period: "Start Date - End Date NEEDED",
-      location: "Location NEEDED",
-      responsibilities: [
-        "Early career responsibilities and learning experiences. NEEDED",
-        "Notable contributions or projects from this foundational role. NEEDED",
+        "Pursuing Bachelor of Science in Informatics/Computer Science at one of Indonesia's premier technical universities",
+        "Actively participating in competitive programming competitions at national and international levels",
+        "Developing proficiency in software design, algorithms, and data structures through coursework and practical projects",
+        "Collaborating on team-based projects implementing various software engineering methodologies and best practices",
       ],
     },
   ],
   projects: [
     {
-      title: "Major Project Name NEEDED",
-      techStack: "Technology 1, Technology 2, Technology 3 NEEDED",
+      title: "Infinite Wiki",
+      techStack: "Gemini AI, Web Development",
       description:
-        "Comprehensive description of the project, its purpose, and the problem it solves. Include your specific role and contributions. NEEDED",
+        "A Wikipedia-like website that dynamically generates article definitions using Google's Gemini AI. This innovative project combines traditional wiki functionality with modern AI capabilities to provide instant, comprehensive explanations on any topic.",
       highlights: [
-        "Key feature or functionality you implemented. NEEDED",
-        "Technical challenge you overcame and how you solved it. NEEDED",
-        "Impact or results of the project (users, performance metrics, etc.). NEEDED",
+        "Implemented AI-powered content generation using Gemini AI API",
+        "Created a seamless user experience for accessing AI-generated encyclopedic content",
+        "Successfully deployed and accessible via public website",
       ],
     },
     {
-      title: "Secondary Project Name NEEDED",
-      techStack: "Framework 1, Library 2, Tool 3 NEEDED",
+      title: "Online Library",
+      techStack: "Python, Latent Sentiment Analysis (LSA), Text Analysis",
       description:
-        "Overview of this project, highlighting what makes it unique or innovative. Explain your motivation and the value it provides. NEEDED",
+        "Developed an intelligent book recommendation system utilizing text sentiment analysis through Latent Sentiment Analysis (LSA). Created comprehensive analysis modules to process and evaluate book content for personalized recommendations.",
       highlights: [
-        "Notable technical implementation or architecture decision. NEEDED",
-        "Collaboration aspects if it was a team project. NEEDED",
+        "Built the book recommendation engine using advanced LSA techniques",
+        "Designed and implemented sentiment analysis modules from scratch",
       ],
     },
     {
-      title: "Side Project or Open Source Contribution NEEDED",
-      techStack: "Technologies Used NEEDED",
+      title: "Subgroddit",
+      techStack: "CLI, Data Structures, Python/C++",
       description:
-        "Brief description of this additional project or contribution. Emphasize what you learned or how it demonstrates your passion for the field. NEEDED",
-      highlights: [],
+        "A command-line interface based Reddit-like platform demonstrating proficiency in data structures and software architecture. Implemented core functionality including persistent storage and advanced voting mechanisms.",
+      highlights: [
+        "Developed load/save module for data persistence",
+        "Implemented custom double-ended linked list data structure",
+        "Created voting system with efficient data manipulation",
+      ],
+    },
+    {
+      title: "Matrix Calculator",
+      techStack: "Python/C++, Linear Algebra",
+      description:
+        "A comprehensive calculator application for matrix operations, focusing on advanced mathematical computations. Worked on multiple complex modules including linear equation solving, determinant calculation, and regression analysis.",
+      highlights: [
+        "Implemented linear equation system solver module",
+        "Developed determinant calculation algorithms",
+        "Created regression analysis module for statistical computations",
+      ],
+    },
+    {
+      title: "Gravity Runner",
+      techStack: "Unity, C#, Game Development",
+      description:
+        "An endless runner game developed in Unity game engine, featuring dynamic gameplay mechanics and player abilities. Specialized in implementing the player skill system that enhances gameplay variety and user engagement.",
+      highlights: [
+        "Designed and implemented player skill system",
+        "Created interactive gameplay mechanics in Unity environment",
+      ],
     },
   ],
   skills: [
     {
-      category: "Technical Skills NEEDED",
+      category: "Languages & Technologies",
       items: [
-        "Programming Languages: Language 1, Language 2, Language 3, Language 4 NEEDED",
-        "Frameworks & Libraries: Framework 1, Framework 2, Library 1, Library 2 NEEDED",
-        "Tools & Platforms: Tool 1, Platform 1, Tool 2, Platform 2 NEEDED",
-        "Databases: Database 1, Database 2, Database 3 NEEDED",
+        "Programming Languages: Python, C++, C",
+        "Version Control: Git",
+        "Game Development: Unity, C#",
+        "AI/ML: Gemini AI API, Latent Sentiment Analysis (LSA)",
       ],
     },
     {
-      category: "Professional Skills NEEDED",
+      category: "Technical Competencies",
       items: [
-        "Leadership and team management NEEDED",
-        "Project planning and execution NEEDED",
-        "Cross-functional collaboration NEEDED",
-        "Agile/Scrum methodologies NEEDED",
+        "Data Structures & Algorithms",
+        "Competitive Programming",
+        "Software Design (Coursework)",
+        "Text Analysis & Sentiment Processing",
       ],
     },
     {
-      category: "Certifications & Education NEEDED",
+      category: "Education",
       items: [
-        "Degree Name - University Name, Year NEEDED",
-        "Certification Name - Issuing Organization, Year NEEDED",
-        "Additional Training - Course or Program Name NEEDED",
+        "Bachelor of Science in Informatics/Computer Science - Institut Teknologi Bandung, 2024-2028 (Expected)",
+        "Competitive Programming: ICPC, National Olympiads",
+        "Advanced coursework in Software Design and Computer Science fundamentals",
       ],
     },
   ],

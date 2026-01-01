@@ -51,7 +51,7 @@ export const cvData: CVData = {
     name: "Ahmad Fauzan Putra",
     title: "Computer Science Student",
     description:
-      "Computer Science student at Institut Teknologi Bandung. Competed in ICPC Asia-Jakarta 2025 and placed 2nd in Hology 8.0 2025. Built projects using Python, C++, and various technologies including AI, game development, and data structures.",
+      "Computer Science student at Institut Teknologi Bandung. Received Honors in ICPC Asia-Jakarta 2025 and placed 2nd in Hology 8.0 2025. Built projects using Python, C++, and various technologies including AI, game development, and data structures.",
   },
   contact: {
     linkedin: {
@@ -66,7 +66,7 @@ export const cvData: CVData = {
   },
   awards: [
     {
-      title: "Finalist, ICPC Asia-Jakarta",
+      title: "Honors, ICPC Asia-Jakarta",
       organization: "ICPC",
       year: "2025",
       description:
